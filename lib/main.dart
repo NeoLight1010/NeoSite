@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:neo_site/themes/mainTheme.dart';
+import 'package:neo_site/routes/index.dart';
 
 void main() {
   runApp(NeoSite());
@@ -10,25 +11,10 @@ class NeoSite extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: mainTheme(context),
-      home: MainPage(),
-    );
-  }
-}
-
-class MainPage extends StatefulWidget {
-  @override
-  _MainPageState createState() => _MainPageState();
-}
-
-class _MainPageState extends State<MainPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text("hello"),
-      ),
+      title: "Anthony Suárez / NeoLight",
+      darkTheme: mainTheme(context),
+      themeMode: ThemeMode.dark,
+      home: IndexPage(),
     );
   }
 }
