@@ -21,6 +21,7 @@ class _ContactPageState extends State<ContactPage> {
           icon: Icon(Icons.arrow_back_ios),
           onPressed: () => Navigator.of(context).pop(),
         ),
+        title: Text('contact'),
       ),
     );
   }

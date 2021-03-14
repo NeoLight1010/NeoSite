@@ -21,10 +21,7 @@ class _BioPageState extends State<BioPage> {
           icon: Icon(Icons.arrow_back_ios),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: Text(
-          'bio',
-          textScaleFactor: .8,
-        ),
+        title: Text('bio'),
       ),
     );
   }

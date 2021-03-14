@@ -21,6 +21,7 @@ class _DevPageState extends State<DevPage> {
           icon: Icon(Icons.arrow_back_ios),
           onPressed: () => Navigator.of(context).pop(),
         ),
+        title: Text('dev'),
       ),
     );
   }
