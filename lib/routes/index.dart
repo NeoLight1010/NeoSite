@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:neo_site/routes/bio/bio.dart';
+import 'package:neo_site/routes/dev/dev.dart';
+import 'package:neo_site/routes/contact/contact.dart';
 
 class IndexPage extends StatefulWidget {
-  static String route = '';
+  static String route = '/';
 
   @override
   _IndexPageState createState() => _IndexPageState();
@@ -26,9 +29,18 @@ class _IndexPageState extends State<IndexPage> {
             Container(height: 50),
             Column(
               children: [
-                TextButton(onPressed: () {}, child: Text('bio')),
-                TextButton(onPressed: () {}, child: Text('dev')),
-                TextButton(onPressed: () {}, child: Text('contact')),
+                TextButton(
+                    onPressed: () =>
+                        Navigator.of(context).pushNamed(BioPage.route),
+                    child: Text('bio')),
+                TextButton(
+                    onPressed: () =>
+                        Navigator.of(context).pushNamed(DevPage.route),
+                    child: Text('dev')),
+                TextButton(
+                    onPressed: () =>
+                        Navigator.of(context).pushNamed(ContactPage.route),
+                    child: Text('contact')),
               ],
             )
           ],

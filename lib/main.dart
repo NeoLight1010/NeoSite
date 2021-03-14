@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:neo_site/themes/mainTheme.dart';
 import 'package:neo_site/routes/index.dart';
+import 'package:neo_site/routes/bio/bio.dart';
+import 'package:neo_site/routes/dev/dev.dart';
+import 'package:neo_site/routes/contact/contact.dart';
 
 void main() {
   runApp(NeoSite());
@@ -14,7 +17,13 @@ class NeoSite extends StatelessWidget {
       title: "Anthony Suárez / NeoLight",
       darkTheme: mainTheme(context),
       themeMode: ThemeMode.dark,
-      home: IndexPage(),
+      initialRoute: IndexPage.route,
+      routes: {
+        IndexPage.route: (context) => IndexPage(),
+        BioPage.route: (context) => BioPage(),
+        DevPage.route: (context) => DevPage(),
+        ContactPage.route: (context) => ContactPage(),
+      },
     );
   }
 }
