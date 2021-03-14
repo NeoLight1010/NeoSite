@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 ThemeData mainTheme(context) {
   return ThemeData(
     scaffoldBackgroundColor: Colors.black,
-    appBarTheme: _appBarTheme,
+    textTheme: _textTheme(context),
+    appBarTheme: _appBarTheme(context),
     textButtonTheme: TextButtonThemeData(
       style: ButtonStyle(
         foregroundColor: MaterialStateProperty.resolveWith(
@@ -17,11 +18,6 @@ ThemeData mainTheme(context) {
         ),
       ),
     ),
-    textTheme: Theme.of(context).textTheme.apply(
-          fontFamily: 'FiraMono',
-          bodyColor: _colorScheme.onBackground,
-          fontSizeFactor: 1.9,
-        ),
     colorScheme: _colorScheme,
   );
 }
@@ -33,6 +29,18 @@ final ColorScheme _colorScheme = ColorScheme.dark(
   secondary: Colors.cyan,
 );
 
-final _appBarTheme = AppBarTheme(
-  backgroundColor: _colorScheme.background,
-);
+TextTheme _textTheme(context) {
+  return Theme.of(context).textTheme.apply(
+        fontFamily: 'FiraMono',
+        bodyColor: _colorScheme.onBackground,
+        fontSizeFactor: 1.7,
+      );
+}
+
+AppBarTheme _appBarTheme(context) {
+  return AppBarTheme.of(context).copyWith(
+    backgroundColor: _colorScheme.background,
+    centerTitle: true,
+    textTheme: _textTheme(context),
+  );
+}
