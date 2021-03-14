@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:neo_site/themes/mainTheme.dart';
+import 'package:url_strategy/url_strategy.dart';
+
+// Route imports.
 import 'package:neo_site/routes/index.dart';
 import 'package:neo_site/routes/bio/bio.dart';
 import 'package:neo_site/routes/dev/dev.dart';
 import 'package:neo_site/routes/contact/contact.dart';
 
 void main() {
+  setPathUrlStrategy();
   runApp(NeoSite());
 }
 
