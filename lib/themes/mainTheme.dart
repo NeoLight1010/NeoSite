@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 ThemeData mainTheme(context) {
   return ThemeData(
     scaffoldBackgroundColor: Colors.black,
+    appBarTheme: _appBarTheme,
     textButtonTheme: TextButtonThemeData(
       style: ButtonStyle(
         foregroundColor: MaterialStateProperty.resolveWith(
@@ -26,7 +27,12 @@ ThemeData mainTheme(context) {
 }
 
 final ColorScheme _colorScheme = ColorScheme.dark(
+  background: Colors.black,
   onBackground: Colors.white,
   primary: Colors.red.shade700,
   secondary: Colors.cyan,
+);
+
+final _appBarTheme = AppBarTheme(
+  backgroundColor: _colorScheme.background,
 );
