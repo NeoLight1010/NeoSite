@@ -3,13 +3,14 @@ import 'package:neo_site/themes/mainTheme.dart';
 import 'package:url_strategy/url_strategy.dart';
 
 // Route imports.
+import 'package:neo_site/routes/unknown.dart';
 import 'package:neo_site/routes/index.dart';
 import 'package:neo_site/routes/bio/bio.dart';
 import 'package:neo_site/routes/dev/dev.dart';
 import 'package:neo_site/routes/contact/contact.dart';
 
 void main() {
-  setPathUrlStrategy();
+  // setPathUrlStrategy();
   runApp(NeoSite());
 }
 
@@ -28,6 +29,8 @@ class NeoSite extends StatelessWidget {
         DevPage.route: (context) => DevPage(),
         ContactPage.route: (context) => ContactPage(),
       },
+      onUnknownRoute: (settings) =>
+          MaterialPageRoute(builder: (context) => UnknownPage()),
     );
   }
 }
