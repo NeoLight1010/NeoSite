@@ -35,11 +35,20 @@ class _BioPageState extends State<BioPage> {
                 Divider(
                   height: 50,
                 ),
+                DoubleRowTitleList(title: 'Certificates', list: [
+                  'freeCodeCamp Full Stack Dev. (x/y)',
+                  'IBM/Coursera Data Science Professional',
+                  'Climatón EC finalist'
+                ]),
+                Divider(
+                  height: 50,
+                ),
                 DoubleRowTitleList(
                   title: 'Programming/Markup Languages',
                   list: [
                     'Python',
                     'Javascript',
+                    'Dart',
                     'C++',
                     'HTML/CSS',
                   ],
@@ -47,10 +56,11 @@ class _BioPageState extends State<BioPage> {
                 Divider(
                   height: 50,
                 ),
-                DoubleRowTitleList(title: 'Certificates', list: [
-                  'freeCodeCamp Full Stack Dev. (x/y)',
-                  'IBM/Coursera Data Science Professional',
-                  'Climatón EC finalist'
+                DoubleRowTitleList(title: "Developer Skills", list: [
+                  "Git",
+                  "Django",
+                  "Databases (Document-Oriented, Relational)",
+                  "APIs (REST, GraphQL)",
                 ])
               ],
             ),
