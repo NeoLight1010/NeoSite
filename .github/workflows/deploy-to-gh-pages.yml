@@ -1,4 +1,4 @@
-name: Deplot to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   workflow_dispatch:
