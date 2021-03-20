@@ -19,6 +19,7 @@ jobs:
 
     - name: Build flutter
       run: |
+        ls
         flutter --version
         flutter pub get
         flutter analyze .
