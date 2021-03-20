@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:neo_site/routes/underConstruction.dart';
 
 class ContactPage extends StatefulWidget {
   static String route = '/contact/';
@@ -7,8 +8,13 @@ class ContactPage extends StatefulWidget {
 }
 
 class _ContactPageState extends State<ContactPage> {
-  @override
-  Widget build(BuildContext context) {
+  bool isUnderConstruction = true;
+
+  Widget _getMainWidget(bool isUnderConstruction) {
+    if (isUnderConstruction) {
+      return UnderConstructionPage();
+    }
+
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -17,5 +23,10 @@ class _ContactPageState extends State<ContactPage> {
         ),
       ),
     );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return _getMainWidget(isUnderConstruction);
   }
 }
