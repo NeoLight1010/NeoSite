@@ -25,6 +25,8 @@ jobs:
         ls
         flutter build
     
+    - name: Delete .gitignore
+      run: rm .gitignore
     
     - name: Get the version
       id: get_version
