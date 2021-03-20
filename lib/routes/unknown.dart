@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:neo_site/utils/pages.dart';
+import 'package:neo_site/routes/index.dart';
 
 class UnknownPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
-      ),
+    return DefaultPage(
+      backPageRoute: IndexPage.route,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

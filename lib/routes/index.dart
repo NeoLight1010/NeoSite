@@ -14,6 +14,9 @@ class _IndexPageState extends State<IndexPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomAppBar(
+        child: Text("1.0.0-alpha.1"),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -30,16 +33,16 @@ class _IndexPageState extends State<IndexPage> {
             Column(
               children: [
                 TextButton(
-                    onPressed: () =>
-                        Navigator.of(context).pushNamed(BioPage.route),
+                    onPressed: () => Navigator.of(context)
+                        .pushReplacementNamed(BioPage.route),
                     child: Text('bio')),
                 TextButton(
-                    onPressed: () =>
-                        Navigator.of(context).pushNamed(DevPage.route),
+                    onPressed: () => Navigator.of(context)
+                        .pushReplacementNamed(DevPage.route),
                     child: Text('dev')),
                 TextButton(
-                    onPressed: () =>
-                        Navigator.of(context).pushNamed(ContactPage.route),
+                    onPressed: () => Navigator.of(context)
+                        .pushReplacementNamed(ContactPage.route),
                     child: Text('contact')),
               ],
             )
