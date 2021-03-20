@@ -19,9 +19,7 @@ jobs:
     - name: Build flutter
       run: |
         flutter pub get
-        flutter format --set-exit-if-changed .
         flutter analyze .
-        flutter test
         flutter build web
     
     
