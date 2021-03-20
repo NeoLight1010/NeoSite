@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:neo_site/routes/underConstruction.dart';
+import 'package:neo_site/utils/pages.dart';
+import 'package:neo_site/routes/index.dart';
 
 class DevPage extends StatefulWidget {
   static String route = '/dev/';
@@ -8,26 +9,12 @@ class DevPage extends StatefulWidget {
 }
 
 class _DevPageState extends State<DevPage> {
-  bool isUnderConstruction = true;
-
-  Widget _getMainWidget(bool isUnderConstruction) {
-    if (isUnderConstruction) {
-      return UnderConstructionPage();
-    }
-
-    return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
-        title: Text('dev'),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
-    return _getMainWidget(isUnderConstruction);
+    return DefaultPage(
+      isUnderConstruction: true,
+      backPageRoute: IndexPage.route,
+      body: Container(),
+    );
   }
 }
