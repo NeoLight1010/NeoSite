@@ -5,6 +5,7 @@ ThemeData mainTheme(context) {
     scaffoldBackgroundColor: Colors.black,
     textTheme: _textTheme(context),
     appBarTheme: _appBarTheme(context),
+    bottomAppBarColor: _colorScheme.background,
     textButtonTheme: TextButtonThemeData(
       style: ButtonStyle(
         foregroundColor: MaterialStateProperty.resolveWith(
