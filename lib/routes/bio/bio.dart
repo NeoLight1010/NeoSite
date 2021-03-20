@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:neo_site/routes/underConstruction.dart';
+import 'package:neo_site/routes/bio/_data.dart';
 
 class BioPage extends StatefulWidget {
   static String route = '/bio/';
@@ -8,13 +9,13 @@ class BioPage extends StatefulWidget {
 }
 
 class _BioPageState extends State<BioPage> {
-  final bool isUnderConstruction = true;
+  final bool isUnderConstruction = false;
+  String _description = Data.description;
 
   Widget _getMainWidget(bool isUnderConstruction) {
     if (isUnderConstruction) {
       return UnderConstructionPage();
     }
-
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -22,6 +23,18 @@ class _BioPageState extends State<BioPage> {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text('bio'),
+      ),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+            child: Column(
+              children: [
+                Text(_description),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
