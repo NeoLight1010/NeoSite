@@ -30,16 +30,16 @@ class _IndexPageState extends State<IndexPage> {
             Column(
               children: [
                 TextButton(
-                    onPressed: () =>
-                        Navigator.of(context).popAndPushNamed(BioPage.route),
+                    onPressed: () => Navigator.of(context)
+                        .pushReplacementNamed(BioPage.route),
                     child: Text('bio')),
                 TextButton(
-                    onPressed: () =>
-                        Navigator.of(context).popAndPushNamed(DevPage.route),
+                    onPressed: () => Navigator.of(context)
+                        .pushReplacementNamed(DevPage.route),
                     child: Text('dev')),
                 TextButton(
                     onPressed: () => Navigator.of(context)
-                        .popAndPushNamed(ContactPage.route),
+                        .pushReplacementNamed(ContactPage.route),
                     child: Text('contact')),
               ],
             )

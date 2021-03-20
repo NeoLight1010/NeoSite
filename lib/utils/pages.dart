@@ -24,7 +24,7 @@ class DefaultPage extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
           onPressed: () =>
-              Navigator.of(context).popAndPushNamed(this.backPageRoute),
+              Navigator.of(context).pushReplacementNamed(this.backPageRoute),
         ),
       ),
       body: this.body,
