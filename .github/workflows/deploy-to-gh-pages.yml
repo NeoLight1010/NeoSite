@@ -1,0 +1,45 @@
+name: Deplot to GitHub Pages
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  # This workflow contains a single job called "greet"
+  deploy-to-gh-pages:
+    name: Deploy to GitHub Pages.
+    runs-on: ubuntu-latest
+
+    steps:    
+    
+    - uses: actions/checkout/@v2
+    - uses: subosito/flutter-action/@v1
+
+    - name: Build flutter
+      run: |
+        flutter pub get
+        flutter format --set-exit-if-changed .
+        flutter analyze .
+        flutter test
+        flutter build web
+    
+    
+    - name: Get the version
+      id: get_version
+      run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}    
+    
+    - name: Commit changes
+      run: |
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git commit build/web -m "Build web app"
+        git tag ${{ steps.get_version.outputs.VERSION }}
+    
+    - name: Push to gh-pages branch
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages
+        tags: true
+        directory: ./build/web
