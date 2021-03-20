@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:neo_site/routes/underConstruction.dart';
 import 'package:neo_site/routes/bio/_data.dart';
+import 'package:neo_site/utils/widgets.dart';
 
 class BioPage extends StatefulWidget {
   static String route = '/bio/';
@@ -31,6 +32,26 @@ class _BioPageState extends State<BioPage> {
             child: Column(
               children: [
                 Text(_description),
+                Divider(
+                  height: 50,
+                ),
+                DoubleRowTitleList(
+                  title: 'Programming/Markup Languages',
+                  list: [
+                    'Python',
+                    'Javascript',
+                    'C++',
+                    'HTML/CSS',
+                  ],
+                ),
+                Divider(
+                  height: 50,
+                ),
+                DoubleRowTitleList(title: 'Certificates', list: [
+                  'freeCodeCamp Full Stack Dev. (x/y)',
+                  'IBM/Coursera Data Science Professional',
+                  'Climatón EC finalist'
+                ])
               ],
             ),
           ),
