@@ -14,7 +14,7 @@ class _ContactPageState extends State<ContactPage> {
     return DefaultPage(
       isUnderConstruction: true,
       backPageRoute: IndexPage.route,
-      body: Container(),
+      body: (context, data) => Container(),
     );
   }
 }

@@ -7,7 +7,7 @@ class UnderConstructionPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return DefaultPage(
       backPageRoute: IndexPage.route,
-      body: Center(
+      body: (context, data) => Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
