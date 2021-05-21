@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DoubleRowTitleList extends StatefulWidget {
-  /// Returns a row (2 containers) custom Widget for bio, dev and contact page.
+  /// Returns a row (2 containers) custom Widget.
   ///
   /// The first container is a Text, and the second one is a Column containing
   /// multiple Texts.
@@ -57,5 +57,22 @@ class _DoubleRowTitleListState extends State<DoubleRowTitleList> {
     }
 
     return list;
+  }
+}
+
+class ProjectItem extends StatelessWidget {
+  final String title;
+
+  ProjectItem({required this.title});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: Column(
+        children: [
+          Text(title),
+        ],
+      ),
+    );
   }
 }
