@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:neo_site/routes/bio/_data.dart';
 import 'package:neo_site/utils/widgets.dart';
 import 'package:neo_site/utils/pages.dart';
 import 'package:yaml/yaml.dart';
@@ -18,7 +17,6 @@ class BioPage extends StatefulWidget {
 }
 
 class _BioPageState extends State<BioPage> {
-  String _description = Data.description;
   final data = _loadData();
 
   @override
@@ -38,37 +36,27 @@ class _BioPageState extends State<BioPage> {
                     padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
                     child: Column(
                       children: [
-                        Text(_description),
+                        Text(data["description"]),
                         Divider(
                           height: 50,
                         ),
-                        DoubleRowTitleList(title: 'Certificates', list: [
-                          'freeCodeCamp Full Stack Dev. (x/y)',
-                          'IBM/Coursera Data Science Professional',
-                          'Climatón EC finalist'
-                        ]),
+                        DoubleRowTitleList(
+                          title: 'Certificates',
+                          list: data["certificates"].cast<String>(),
+                        ),
                         Divider(
                           height: 50,
                         ),
                         DoubleRowTitleList(
                           title: 'Programming/Markup Languages',
-                          list: [
-                            'Python',
-                            'Javascript',
-                            'Dart',
-                            'C++',
-                            'HTML/CSS',
-                          ],
+                          list: data["programming-langs"].cast<String>(),
                         ),
                         Divider(
                           height: 50,
                         ),
-                        DoubleRowTitleList(title: "Developer Skills", list: [
-                          "Git",
-                          "Django",
-                          "Databases (Document-Oriented, Relational)",
-                          "APIs (REST, GraphQL)",
-                        ])
+                        DoubleRowTitleList(
+                            title: "Developer Skills",
+                            list: data["developer-skills"].cast<String>())
                       ],
                     ),
                   ),
