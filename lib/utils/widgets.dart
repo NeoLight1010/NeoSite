@@ -60,6 +60,7 @@ class _DoubleRowTitleListState extends State<DoubleRowTitleList> {
   }
 }
 
+/// Returns project Card for dev page.
 class ProjectItem extends StatelessWidget {
   final String title;
 
