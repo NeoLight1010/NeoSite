@@ -6,6 +6,9 @@ projects:
   - title: NeoSite
     description: The site you are on right now.
 
+  - title: NeoReddit
+    description: Redit clone using Node, React, TypeScript, GraphQL and PostgresQL.
+
   - title: fCC projects
     description: A collection of projects made for freeCodeCamp certifications.
   
