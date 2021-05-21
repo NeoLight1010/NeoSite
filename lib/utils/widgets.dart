@@ -63,15 +63,30 @@ class _DoubleRowTitleListState extends State<DoubleRowTitleList> {
 /// Returns project Card for dev page.
 class ProjectItem extends StatelessWidget {
   final String title;
+  final String description;
 
-  ProjectItem({required this.title});
+  ProjectItem({
+    required this.title,
+    required this.description,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Card(
       child: Column(
         children: [
-          Text(title),
+          Text(
+            title,
+            style: TextStyle(
+              color: Theme.of(context).colorScheme.primary,
+              fontWeight: FontWeight.bold,
+            ),
+            textScaleFactor: 1.2,
+          ),
+          Divider(
+            height: 10,
+          ),
+          Text(description),
         ],
       ),
     );

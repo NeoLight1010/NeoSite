@@ -8,7 +8,11 @@ import 'package:yaml/yaml.dart';
 /// Generates a list of ProjectItems given a YamlList with the projects' data.
 List<Widget> _generateProjectItems(YamlList data) {
   return List<Widget>.generate(
-      data.length, (index) => ProjectItem(title: data[index]["title"]));
+      data.length,
+      (i) => ProjectItem(
+            title: data[i]["title"],
+            description: data[i]["description"],
+          ));
 }
 
 class DevPage extends StatefulWidget {
