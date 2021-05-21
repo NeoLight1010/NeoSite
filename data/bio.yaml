@@ -1,0 +1,28 @@
+title: bio
+
+description: |
+  Hello, my name is Anthony Suárez. I am a college student with a strong passion for learning and software engineering. I've been interested in programming since I was 13 years old, which is when I started learning via online courses like Codecademy. I noticed that coding was hard sometimes, and that's what encouraged me to keep learning, because I've always thought difficult topics are really fun. Approximately a year ago, I programming is going to become my profession.
+
+  I have the ability to learn really fast. I taught myself English, I'm currently learning Japanese, and I'm always working on software projects, learning new and exciting topics.
+
+  I've come really far and I know I'm ready to take the next step: working in a professional environment. I may not have a college degree, but I have what I think is most essential: passion and determination.
+
+  Below you can see some of my abilities and achievements.
+
+certificates:
+  - freeCodeCamp (6 certificates, 300 h. each).
+  - IBM/Coursera Data Science Professional Certificate.
+  - Climatón EC. finalist.
+
+programming-langs:
+  - Python
+  - JS/TS
+  - C/C++
+  - Dart
+  - HTML/CSS
+
+developer-skills:
+  - Backend Development
+  - Git
+  - MongoDB/PostgreSQL
+  - GraphQL/REST
