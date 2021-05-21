@@ -1,0 +1,31 @@
+title: dev
+
+description: "These are some of my projects:"
+
+projects:
+  - title: NeoSite
+    description: The site you are on right now.
+
+  - title: fCC projects
+    description: A collection of projects made for freeCodeCamp certifications.
+  
+  - title: Python Hangman
+    description: Beautiful hangman game. Console based.
+
+  - title: CriptoMatrices
+    description: Encript strings using matrices.
+
+  - title: Sketchbook
+    description: My collection of Processing sketches.
+
+  - title: ChannelChat
+    description: Simple chatroom app using Django and Redis.
+
+  - title: MúsculosScraper
+    description: A Python script that helped my girlfriend do her Anatomy assignment.
+
+  - title: GeoEcuador
+    description: Godot interactive app to learn about Ecuador.
+
+  - title: Terminal Chat  
+    description: Python terminal-based chat app using sockets and threading.
