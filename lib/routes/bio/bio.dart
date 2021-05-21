@@ -17,8 +17,6 @@ class BioPage extends StatefulWidget {
 }
 
 class _BioPageState extends State<BioPage> {
-  final data = _loadData();
-
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
@@ -30,7 +28,8 @@ class _BioPageState extends State<BioPage> {
             return DefaultPage(
               backPageRoute: IndexPage.route,
               title: data["title"],
-              body: SingleChildScrollView(
+              future: _loadData(),
+              body: (context, data) => SingleChildScrollView(
                 child: Center(
                   child: Padding(
                     padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
